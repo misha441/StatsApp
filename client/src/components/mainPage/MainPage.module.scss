@@ -1,0 +1,209 @@
+.mainPage{
+    position: relative;
+}
+
+.header{
+    padding: 20px 0;
+    background-size: 100% 100%;
+    .header__inner{
+        display: flex;
+        width: 100%;
+    }
+    &__slogan{
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 59px;
+        color: #FFFFFF;
+        margin-top: 48px;
+        span{
+            font-weight: 700;
+        }
+    }
+    &__text{
+        margin-top: 24px;
+        font-weight: normal;
+        font-size: 20px;
+        color: #FFFFFF;
+    }
+    &__users_link{
+        display: inline-block;
+        background: #FFFFFF;
+        border-radius: 8px;
+        padding: 17px 32px;
+        margin-top: 42px;
+        font-weight: normal;
+        font-size: 16px;
+        color: #3A80BA;
+        text-decoration: none;
+    }
+
+    &__rightBox{
+        display: flex;
+        align-items: center;
+        img{
+            height: 90%;
+        }
+
+    }
+}
+
+.content{
+    &__title{
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        color: #1A1A1A;
+        span{
+            font-weight: bold;
+        }
+    }
+    &__text{
+        font-weight: normal;
+        font-size: 20px;
+        text-align: center;
+        color: #7E7E7E;
+        max-width: 780px;
+        margin: 24px auto 0;
+    }
+}
+
+.content__cards{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 128px;
+
+}
+
+.card{
+    font-size: 24px;
+    padding: 2em 1.33em;
+    box-shadow: 0px 0.166em 0.66em rgba(0, 0, 0, 0.16);
+    border-radius: 1.33em;
+    text-align: center;
+    &:not(:last-child){
+        margin-right: 20px;
+    }
+
+    &__photo{
+        img{
+            height: 4em;
+        }
+    }
+    &__title{
+        margin-top: 1.66em;
+        font-weight: 600;
+        font-size: 1em;
+        line-height: 1.21em;
+        color: #1A1A1A;
+    }
+    &__text{
+        margin-top: 0.66em;
+        font-weight: normal;
+        font-size: 0.66em;
+        color: #7E7E7E;
+    }
+}
+
+.footer{
+    padding: 114px 0 31px;
+    background-size: 100% 100%;
+    color: #FFFFFF;
+    font-size: 16px;
+    .logo{
+        font-size: 32px;
+    }
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:1023px){
+    .header{
+        &__slogan{
+            font-size: 38px;
+            margin-top: 30px;
+        }
+        &__text{
+            font-size: 18px;
+        }
+        &__rightBox{
+            justify-content: right;
+            flex-basis: content;
+            img{
+                height: 75%;
+            }
+        }
+    }
+
+
+    .content{
+        &__title{
+            font-size: 28px;
+        }
+        &__text{
+            max-width: 80%;
+            font-size: 17px;
+        }
+    }
+
+    .card{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:767px){
+    .header{
+        background-size: 155% 155%;
+        background-position: top left;
+        &__slogan{
+            text-align: center;
+        }
+        &__text{
+            text-align: center;
+        }
+        &__users_linkWrapper{
+            display: flex;
+            justify-content: center;
+        }
+        &__users_link{
+            margin: 34px auto 0;
+        }
+        &__rightBox{
+            img{
+                display: none;
+            }
+        }
+    }
+
+    .content{
+        &__title{
+            font-size: 27px;
+        }
+        &__text{
+            max-width: 80%;
+            font-size: 15px;
+        }
+        &__cards{
+            display: block;
+            .card{
+                margin: 20px 10px;
+            }
+        }
+    }
+    .footer{
+        &__inner{
+            display: block;
+            text-align: center;
+        }
+    }
+
+}
+
+@media screen and (max-width:400px){
+    .header__slogan{
+        font-size: 34px;
+    }
+}

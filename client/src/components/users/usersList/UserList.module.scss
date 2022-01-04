@@ -1,0 +1,134 @@
+.links{
+  font-size: 16px;
+  display: flex;
+  margin-top: 16px;
+  .pageLink{
+    position: relative;
+    color: #CCCCCC;
+    align-items: center;
+    &:not(:last-child){
+      margin-right: 20px;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    &:not(:last-child):after{
+      content: '';
+      display: block;
+      position: absolute;
+      right: -12px;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      height: 0.5em;
+      width: 0.5em;
+      border: 1px solid #CCCCCC;
+      border-top: 0px;
+      border-left: 0px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  .disabledLink{
+    color: #3A80BA;
+  }
+}
+
+.title{
+  margin: 24px 0 0;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 39px;
+  color: #1A1A1A;
+}
+.table{
+  position: relative;
+  margin: 30px 0;
+}
+
+$bdradius: 8px;
+
+.usersTable{
+  border-collapse: collapse!important;
+  color: #1A1A1A;
+  width: 100%;
+  border-radius: 8px;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px #fff;
+  th{
+    padding: 24px 14px;
+  }
+  td{
+    padding: 8px 14px;
+  }
+  td,th{
+    border: 1px solid #fff;
+  }
+  thead{
+    background-color: #3A80BA;
+    text-align: left;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+  }
+  tbody{
+    background-color: #FBFBFB;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1A1A1A;
+  }
+  tbody tr:nth-child(even) {
+    background-color: #F1F1F1;
+  }
+  thead tr:first-child th:first-child {
+    border-radius: $bdradius 0px 0px 0px;
+  }
+  thead tr:first-child th:last-child {
+    border-radius: 0px $bdradius 0px 0px;
+  }
+  tbody tr:last-child td:first-child {
+    border-radius: 0px 0px 0px $bdradius;
+  }
+  tbody tr:last-child td:last-child {
+    border-radius: 0px 0px $bdradius 0px;
+  }
+  td a{
+    color: #1A1A1A;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+
+@media screen and (max-width:920px){
+  .table{
+    overflow-x: scroll;
+    th{
+      padding: 20px 10px;
+    }
+    td{
+      padding: 4px 10px;
+    }
+    thead{
+      font-size: 14px;
+    }
+    tbody{
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width:550px){
+  .title{
+    font-size: 29px;
+  }
+
+  .links{
+    font-size: 12px;
+  }
+
+}

@@ -1,0 +1,26 @@
+.header{
+  padding: 13px 0;
+  background-color: #3A80BA;
+}
+
+.footer{
+  padding: 14px 0;
+  color: #FFFFFF;
+  font-size: 16px;
+  background-color: #1C3B55;
+  .logo{
+    font-size: 24px;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width:550px){
+  .footer__inner{
+    display: block;
+    text-align: center;
+  }
+}

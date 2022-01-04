@@ -1,0 +1,103 @@
+$fontSize: 16px;
+
+.paginatorWrapper{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 20px 10px;
+  border-bottom: 2px solid #e0e0e0;
+  font-size: $fontSize;
+}
+
+.paginatorbuttonStyle{
+  border: none;
+  background-color: inherit;
+  font-weight: 700;
+  display: block;
+  padding: $fontSize/2;
+  font-size: 0;
+  color: #aaaaaa;
+  border: 4px solid #3A80BA;
+  transform: rotate(-45deg);
+  &.leftButton{
+    border-right: 0;
+    border-bottom: 0;
+  }
+  &.rightButton{
+    border-top: 0px;
+    border-left: 0px;
+  }
+  &:hover{
+    background: none!important;
+    cursor: pointer;
+  }
+}
+
+.paginatorIcon{
+  font-size: 20px;
+}
+
+.paginatorbuttonStyle:focus{
+  outline: none;
+}
+.paginatorbuttonStyle:hover{
+  background-color: #eaeaea;
+}
+
+.pageNumbersBlock{
+
+}
+
+.pageNumbers{
+  font-size: 1em;
+  display: inline-block;
+  cursor: pointer;
+  color: #1A1A1A;
+  border: 2px solid #F1F1F1;
+  width: 3em;
+  height: 3em;
+  margin: 0 8px;
+  border-radius: 8px;
+  min-width: 40px;
+  transition: all .2s linear;
+  span{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.pageNumbers:hover{
+  background-color: #eaeaea;
+}
+
+.selectedPage{
+  color: #fff;
+  background-color: #3A80BA;
+}
+
+@media screen and (max-width:550px){
+  .paginatorWrapper{
+    font-size: 14px;
+  }
+
+  .paginatorbuttonStyle {
+    padding: 14px/2;
+  }
+}
+
+@media screen and (max-width:450px){
+  .paginatorWrapper{
+    font-size: 12px;
+  }
+
+  .paginatorbuttonStyle {
+    padding: 12px/2;
+  }
+
+  .pageNumbers{
+    margin: 0 4px;
+  }
+}
